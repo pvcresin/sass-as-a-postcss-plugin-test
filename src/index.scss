@@ -1,0 +1,25 @@
+@import "./styles/variables.scss";
+@import "./styles/variables2.scss";
+
+@mixin bold() {
+  font-weight: bold;
+}
+
+body {
+  background-color: $primary-color;
+
+  & h1 {
+    background-color: $secondary-color;
+    color: white;
+  }
+
+  & .section {
+    background-color: cyan;
+
+    & .paragraph {
+      @include bold;
+      color: red;
+      padding-left: 1rem;
+    }
+  }
+}
